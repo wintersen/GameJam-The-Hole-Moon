@@ -16,6 +16,7 @@ public class Get : MonoBehaviour
     {
         canGet = false;
         handsFull = false;
+        heldItem = null;
     }
 
     // Update is called once per frame

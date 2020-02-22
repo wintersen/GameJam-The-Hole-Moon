@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GateHit : MonoBehaviour
 {
+    public string color;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,12 @@ public class GateHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "RedKey")
+        if(collision.gameObject.name == "RedKey" && color == "red")
+        {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.name == "BlueKey" && color == "blue")
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
