@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headAnchor: {fileID: 0}
   player: {fileID: 0}
-  strength: 15
+  strength: 12
   isGrabbable: 1
   heldItem: {fileID: 0}
 --- !u!95 &7185095848078572136
