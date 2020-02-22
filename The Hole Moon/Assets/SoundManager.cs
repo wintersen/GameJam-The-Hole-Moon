@@ -9,8 +9,8 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stayBark = Resources.Load<AudioClip>("StayBarkv2");
-        followBark = Resources.Load<AudioClip>("FollowBark");
+        stayBark = Resources.Load<AudioClip>("StayBarkLouder");
+        followBark = Resources.Load<AudioClip>("FollowBarkLouder");
         audioSrc = GetComponent<AudioSource>();
     }
 
