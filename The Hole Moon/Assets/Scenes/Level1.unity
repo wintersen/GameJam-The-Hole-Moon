@@ -380,6 +380,11 @@ PrefabInstance:
       propertyPath: dog
       value: 
       objectReference: {fileID: 710018782}
+    - target: {fileID: 4052312136517603785, guid: 90d6c210564196a46933825366200293,
+        type: 3}
+      propertyPath: nextLevel
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 4052312136517603786, guid: 90d6c210564196a46933825366200293,
         type: 3}
       propertyPath: m_Name

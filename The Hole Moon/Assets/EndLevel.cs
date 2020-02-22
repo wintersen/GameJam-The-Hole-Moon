@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
     private bool isDogIn = false;
     private bool isPlayerIn = false;
     public GameObject dog;
+    public string nextLevel;
 
     private void Update()
     {
@@ -34,5 +36,6 @@ public class EndLevel : MonoBehaviour
     private void endLevel()
     {
         Debug.Log("Level ending");
+        SceneManager.LoadScene(nextLevel);
     }
 }
