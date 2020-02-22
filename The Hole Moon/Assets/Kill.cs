@@ -23,7 +23,6 @@ public class Kill : MonoBehaviour
     // Coroutines 
     IEnumerator knockout()
     {
-        Debug.Log(rb.bodyType);
         rb.bodyType = RigidbodyType2D.Dynamic;
         isKnockedOut = true;
         yield return new WaitForSeconds(knockOutTime);
