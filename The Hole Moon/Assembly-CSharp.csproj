@@ -68,6 +68,7 @@
     <Compile Include="Assets\Follow.cs" />
     <Compile Include="Assets\GateHit.cs" />
     <Compile Include="Assets\Get.cs" />
+    <Compile Include="Assets\Kill.cs" />
     <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\SoundManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
