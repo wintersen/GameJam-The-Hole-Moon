@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Kill : MonoBehaviour
 {
     private Transform target;  // Player's transform
+    private Rigidbody2D rb;    
     private float facingDirection;
     public float speed = 2f;
     public float knockOutTime = 15;
@@ -15,14 +16,18 @@ public class Kill : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
         facingDirection = transform.localScale.x;
     }
 
     // Coroutines 
     IEnumerator knockout()
     {
+        Debug.Log(rb.bodyType);
+        rb.bodyType = RigidbodyType2D.Dynamic;
         isKnockedOut = true;
         yield return new WaitForSeconds(knockOutTime);
+        rb.bodyType = RigidbodyType2D.Static;
         isKnockedOut = false;
     }
 
@@ -48,7 +53,7 @@ public class Kill : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" && !isKnockedOut)
         {
             // Game Over - Player is Dead
             Destroy(this.gameObject);
