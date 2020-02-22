@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -47,6 +48,12 @@ public class Movement : MonoBehaviour
             {
                 SoundManager.PlaySound("followBark");
             }
+        }
+        //Reset level
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Reset level");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
     }

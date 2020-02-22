@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CharacterController2D.cs" />
+    <Compile Include="Assets\CheckItem.cs" />
     <Compile Include="Assets\EndLevel.cs" />
     <Compile Include="Assets\Follow.cs" />
     <Compile Include="Assets\GateHit.cs" />
